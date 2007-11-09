@@ -1,0 +1,800 @@
+diff -Nur gnome-icon-theme-2.19.91/16x16/mimetypes/Makefile.am gnome-icon-theme-2.19.91.new/16x16/mimetypes/Makefile.am
+--- gnome-icon-theme-2.19.91/16x16/mimetypes/Makefile.am	2007-01-03 22:25:49.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/16x16/mimetypes/Makefile.am	2007-08-30 11:57:05.727199217 +0200
+@@ -6,6 +6,7 @@
+ 
+ icons_DATA =				\
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/16x16/mimetypes/Makefile.in gnome-icon-theme-2.19.91.new/16x16/mimetypes/Makefile.in
+--- gnome-icon-theme-2.19.91/16x16/mimetypes/Makefile.in	2007-08-28 01:30:54.000000000 +0200
++++ gnome-icon-theme-2.19.91.new/16x16/mimetypes/Makefile.in	2007-08-30 11:57:05.727199217 +0200
+@@ -197,6 +197,7 @@
+ iconsdir = $(themedir)/$(size)/$(context)
+ icons_DATA = \
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/22x22/mimetypes/Makefile.am gnome-icon-theme-2.19.91.new/22x22/mimetypes/Makefile.am
+--- gnome-icon-theme-2.19.91/22x22/mimetypes/Makefile.am	2007-01-03 22:25:36.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/22x22/mimetypes/Makefile.am	2007-08-30 11:57:05.727199217 +0200
+@@ -6,6 +6,7 @@
+ 
+ icons_DATA =				\
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/22x22/mimetypes/Makefile.in gnome-icon-theme-2.19.91.new/22x22/mimetypes/Makefile.in
+--- gnome-icon-theme-2.19.91/22x22/mimetypes/Makefile.in	2007-08-28 01:30:56.000000000 +0200
++++ gnome-icon-theme-2.19.91.new/22x22/mimetypes/Makefile.in	2007-08-30 11:57:05.727199217 +0200
+@@ -197,6 +197,7 @@
+ iconsdir = $(themedir)/$(size)/$(context)
+ icons_DATA = \
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/24x24/mimetypes/Makefile.am gnome-icon-theme-2.19.91.new/24x24/mimetypes/Makefile.am
+--- gnome-icon-theme-2.19.91/24x24/mimetypes/Makefile.am	2007-01-03 22:25:43.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/24x24/mimetypes/Makefile.am	2007-08-30 11:57:05.727199217 +0200
+@@ -6,6 +6,7 @@
+ 
+ icons_DATA =				\
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/24x24/mimetypes/Makefile.in gnome-icon-theme-2.19.91.new/24x24/mimetypes/Makefile.in
+--- gnome-icon-theme-2.19.91/24x24/mimetypes/Makefile.in	2007-08-28 01:30:57.000000000 +0200
++++ gnome-icon-theme-2.19.91.new/24x24/mimetypes/Makefile.in	2007-08-30 11:57:05.727199217 +0200
+@@ -197,6 +197,7 @@
+ iconsdir = $(themedir)/$(size)/$(context)
+ icons_DATA = \
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/32x32/mimetypes/Makefile.am gnome-icon-theme-2.19.91.new/32x32/mimetypes/Makefile.am
+--- gnome-icon-theme-2.19.91/32x32/mimetypes/Makefile.am	2007-01-03 22:25:40.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/32x32/mimetypes/Makefile.am	2007-08-30 11:57:05.727199217 +0200
+@@ -6,6 +6,7 @@
+ 
+ icons_DATA =				\
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/32x32/mimetypes/Makefile.in gnome-icon-theme-2.19.91.new/32x32/mimetypes/Makefile.in
+--- gnome-icon-theme-2.19.91/32x32/mimetypes/Makefile.in	2007-08-28 01:30:59.000000000 +0200
++++ gnome-icon-theme-2.19.91.new/32x32/mimetypes/Makefile.in	2007-08-30 11:57:05.727199217 +0200
+@@ -197,6 +197,7 @@
+ iconsdir = $(themedir)/$(size)/$(context)
+ icons_DATA = \
+ 	application-certificate.png	\
++	application-x-cd-image.png	\
+ 	application-x-executable.png	\
+ 	audio-x-generic.png		\
+ 	font-x-generic.png		\
+diff -Nur gnome-icon-theme-2.19.91/debian/patched-icons/16x16/mimetypes/application-x-cd-image.png.uue gnome-icon-theme-2.19.91.new/debian/patched-icons/16x16/mimetypes/application-x-cd-image.png.uue
+--- gnome-icon-theme-2.19.91/debian/patched-icons/16x16/mimetypes/application-x-cd-image.png.uue	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/debian/patched-icons/16x16/mimetypes/application-x-cd-image.png.uue	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1,19 @@
++begin 644 ./16x16/application-x-cd-image.png.uue
++MB5!.1PT*&@H````-24A$4@```!`````0"`8````?\_]A````!F)+1T0`_P#_
++M`/^@O:>3````"7!(67,```L2```+$@'2W7[\````!W1)344'U@H&#@\7:;VF
++M[0```!UT15AT0V]M;65N=`!#<F5A=&5D('=I=&@@5&AE($=)35#O9"5N```"
++M#DE$050XRXW3WTN341S'\?><^N3FGN;S;"L0Q767$`6BF3^RBQ2[C.BJH+\@
++M)`0)NHEH-$9_0=%?$/2#LD2[$"J':5B29*@W>35]GF=LX7`>/-\N2MC#TOS`
++M@7,.G!?G^^6<`'_2F\ZD/O#_#-X>N_.N:C>=28G6NFHHI40I):522912DLZD
++M))U)7:P\6U.Y\#P/UW5Q'1?'<?#R'O-S<TQ,CI/;R#%Z:PQ@JA+Q`2*"B*`1
++MM`BBA>2))/E\GG`H3&XCQ_5K-P"F]L[4^@`M"!H1X"\F0&/8Y-F+IY1*);:V
++MMGSE^P`MFMU=S;>E11:^S.-Y>6S;HKW]%)9E81@&9N0H$Y/C^P!:\_+U<QH;
++M0ERY?)5X/([6POSG.7ZL+-/9T44T&F7?)JZMK1)J"-'9=18(L+U=QC`,>GOZ
++MB=MQ=G84K:VM^P,SV8\,]`]@U!M$(B9-31;%8H%-9X/>GCZRV?=53\`'N)Y#
++M(G$,TS2)Q6+<NW\7PSC"KV*1NOHZ'->M`GP]L&-Q0(A$3!QGDY&;(ZRO_T0I
++MA>=ZV+9U\`VZN\XQ^VF68#!(L+:60J&``/6&079VAI[N_H.!9%N2E=45WKQ]
++M1;"FAD3B.(WA,%\7%RB7R[2U)0\N(1`(,#QTB>_+2SQ^\@C7=;`MBS.G.SC?
++M=_*?O\L'-#<W`]#2TL+0X#"'R1XPG7GXX`*'S_3>Y#>QUN:`!JZDUP````!)
++'14Y$KD)@@@``
++`
++end
+diff -Nur gnome-icon-theme-2.19.91/debian/patched-icons/22x22/mimetypes/application-x-cd-image.png.uue gnome-icon-theme-2.19.91.new/debian/patched-icons/22x22/mimetypes/application-x-cd-image.png.uue
+--- gnome-icon-theme-2.19.91/debian/patched-icons/22x22/mimetypes/application-x-cd-image.png.uue	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/debian/patched-icons/22x22/mimetypes/application-x-cd-image.png.uue	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1,26 @@
++begin 644 ./22x22/application-x-cd-image.png.uue
++MB5!.1PT*&@H````-24A$4@```!8````6"`8```#$M&P[````!F)+1T0`_P#_
++M`/^@O:>3````"7!(67,```N'```+AP&30(=3````!W1)344'U@H&#@DM^>O8
++MV0```XU)1$%4.,NEE$UO&U44AI]Q[+$]KI-Q8B<!FBB)FZ*J2:@#4DC"1[TK
++M3<4/X`?P*T"LD!![),H&(20D0E$7A!(HK%K1KFA%FP0W7[25(J6)QZD_:L]X
++MYAX6GKA.Y+02/=+5W+F:^\Q[WWO.T?#CL\\__1"XR/\(UW8S'WW\R>W6M6#+
++M_.+<>^^33J>)1J-M`8[C``*`917P/(_M[6VN_K%XZ\*%N;&%A9]7`'483#J=
++MQO,\RN5R<TU$F@,$48(@W+QY@YF9628G)]G:V@*X:QC15^?G+]T#"+2"6Y4*
++M@A*%$N6#%:(4"D$I1:52(1P.`Y#-9DD/GV3RC4RNG14'538FX"MLJO:55VLU
++MOOSJBR-]#[2%BB#*5]A4+$_?E2)SY@R9\0QUV\6U75(]?1QU>0VP4DV%KNNR
++MO+S$^L8J><M"TZ"G.\G0T#"I9"\OO_(29X^=Q;(LE!)V\MM'@Y4TCEXIE[GR
++MRP)FM\F;4S/T]O:AZSJV;7-GZ6_^O'&=;#9+?S1*W;'I,KO)K:X<;06B4,KC
++MU]\7&1@8)#/Q.L%0B&JUBN,X&$:,=]YZE]G9M[EV_1JAC@[2(R.,CIY\CL<(
++M]W(Y$ETFHR=&*>P5\%P7`$W3$(1BL<C@P""I9"_W'SXD$`@\__*4$G*K.<;'
++M)N@(!C&[NHC'.TFF4D2C!I5R&:N0IU(I,S'^&NL;ZXV*.!0'/"Z52H@H+"M/
++M7U\_U6H5%8Z02"3XX=+WB`CGS\U1J];0-(VN3A.K8"&BG@UN6-PHV7`X@J8%
++M$!$\[VG*U>LVU5H53=,PHO4#>YX-%J&G.XEMVQB&X9=XB?/GYG#=.O<?/*!>
++M=]!UG=W=74S3;*NX38$H3HRD65J^0S`81&CD<[%8Y-'.#DIY.(Z#'M)9^6>)
++MX<$AOX^T!S=_H!#Z^OM96K[+^OH:D7"$>+R36"Q&_%B<1**;X\<'V/QWD]U\
++MGE1O"J6.!@=;T@)1'F.GQ_CMZB(+5W[BR9,*\7@GIIE`0^/6[;]86UOE]*E3
++M*-__2J5\@+D/#`-4*F64"(9AH&D!9J:GV=C<Y/+E'WE<>@Q`/!:C)YEB>FJ*
++M:#2"KH</>QP!:OO@4&M6"`H]K*/K"28S9J/YJ$;K1&LT.!'E/QO?MX0!./M@
++MKYDF(9T7C`-6V*5BZ;MOOOWZ@Q<A[A7VY@$'$,U?TP`=B`.=_G'"0(=O4X<O
++B0O,52<NH`66@V#*\_P!%)>/>B-([]`````!)14Y$KD)@@@``
++`
++end
+diff -Nur gnome-icon-theme-2.19.91/debian/patched-icons/24x24/mimetypes/application-x-cd-image.png.uue gnome-icon-theme-2.19.91.new/debian/patched-icons/24x24/mimetypes/application-x-cd-image.png.uue
+--- gnome-icon-theme-2.19.91/debian/patched-icons/24x24/mimetypes/application-x-cd-image.png.uue	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/debian/patched-icons/24x24/mimetypes/application-x-cd-image.png.uue	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1,27 @@
++begin 644 ./24x24/application-x-cd-image.png.uue
++MB5!.1PT*&@H````-24A$4@```!@````8"`8```#@=SWX````!F)+1T0`_P#_
++M`/^@O:>3````"7!(67,```N'```+AP&30(=3````!W1)344'U@H&#A$KDI/E
++MM0```YY)1$%42,>UE5UO&T44AI]UG+6]KI-U8B<!FBB)FZ*J2:@#4DC"1WU7
++MFHH?P`_@5X"X0D+<(U%N$$)"(A3U@E`"A:M6M%>THDV"FR_:2I72Q.O4]M;V
++M>G<.%UX<US0?HNI(1SLSVCGO>\X[YPP\YZ$U+S[Y]./W@?/_QY%;==,??/C1
++MS=;]8,OZ_.P[[Y)*I8A$(D]UY#@.(`!85A[/\]C<W.3R;PLWSIV;'9V?_W$9
++M4'L!D$JE\#R/4JG4V!.1AH$@2A"$Z]>O,3T]P\3$!`\>/`"X;1B1E^?F+MSY
++M]VR@%:"9N2`H42A1/H!"E$(A**6P;9M0*`1`)I,A-72<B=?2V?U2]"3K^@1\
++MQHTH_$C*E0J??_'9OMH$]G0N@BB?<2,"V5TK1?K4*=)C:6I5%[?JDNSNY2"1
++MZP!*-1B[KLO2TB)KZROD+`M-@^ZN!(.#0R03/;SXT@N</G(:R[)02MC*;1X,
++MH*2>$KM4XM)/\YA=)J]/3M/3TXNNZU2K56XM_LGOUZZ2R63HBT2H.54ZS2ZR
++M*\L'IPA1*.7Q\Z\+]/</D!Y_E6![.^5R&<=Q,(PH;[WQ-C,S;W+EZA7:V]I(
++M#0\S,G+\D!H@W,EFB7>:C!P;(;^3QW/=>F5J&H)0*!08Z!\@F>CA[OW[!`*!
++MPXNLE)!=R3(V.DY;,(C9V4DLUD$BF202,;!+):Q\#MLN,3[V"FOK:[N5=9#(
++MQ6(1$85EY>CM[:-<+J-"8>+Q.-]=^!81X>R962KE"IJFT=EA8N4M1-3A`.H2
++MU%M!*!1&TP*(")ZW>U5KM2KE2AE-TS`BM2?.'`Y`A.ZN!-5J%<,P_-91Y.R9
++M65RWQMU[]ZC5''1=9WM[&],T]XQ@CT)3'!M.L;ATBV`PB%"OAT*AP,.M+93R
++M<!P'O5UG^:]%A@8&_3ZU/T!CKA!Z^_I87+K-VMHJX5"86*R#:#1*[$B,>+R+
++MHT?[V?A[@^U<CF1/$J4.!@@V72-$>8R>'.67RPO,7_J!QX]M8K$.3#..AL:-
++MFW^PNKK"R1,G4+X^MEWZC]]F#4(`MEU"B6`8!IH68'IJBO6-#2Y>_)Y'Q4<`
++MQ*)1NA-)IB8GB43"Z'JH58,P4`%4,T![\RT2%'I(1]?C3*3->I-3]9:-5F^H
++M(LK_UO]O&@;@M`)XC;#:]6=]BI^:HFJQ4/SFJZ^_?.]9/._D=^9\]M+ZZ&N`
++M#L2`#C_,$-#FIZ_-)Z3Y#*7)*D`)*#29UWB\G^?X!UR>YMFJ-K1)`````$E%
++&3D2N0F""
++`
++end
+diff -Nur gnome-icon-theme-2.19.91/debian/patched-icons/32x32/mimetypes/application-x-cd-image.png.uue gnome-icon-theme-2.19.91.new/debian/patched-icons/32x32/mimetypes/application-x-cd-image.png.uue
+--- gnome-icon-theme-2.19.91/debian/patched-icons/32x32/mimetypes/application-x-cd-image.png.uue	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/debian/patched-icons/32x32/mimetypes/application-x-cd-image.png.uue	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1,37 @@
++begin 644 ./32x32/application-x-cd-image.png.uue
++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
++&3D2N0F""
++`
++end
+diff -Nur gnome-icon-theme-2.19.91/debian/patched-icons/README gnome-icon-theme-2.19.91.new/debian/patched-icons/README
+--- gnome-icon-theme-2.19.91/debian/patched-icons/README	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/debian/patched-icons/README	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1 @@
++for i in `find . -iname *.png`; do uuencode $i.uue < $i > $i.uue; done
+diff -Nur gnome-icon-theme-2.19.91/scalable/mimetypes/application-x-cd-image.svg gnome-icon-theme-2.19.91.new/scalable/mimetypes/application-x-cd-image.svg
+--- gnome-icon-theme-2.19.91/scalable/mimetypes/application-x-cd-image.svg	1970-01-01 01:00:00.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/scalable/mimetypes/application-x-cd-image.svg	2007-08-30 11:57:05.727199217 +0200
+@@ -0,0 +1,556 @@
++<?xml version="1.0" encoding="UTF-8" standalone="no"?>
++<!-- Created with Inkscape (http://www.inkscape.org/) -->
++<svg
++   xmlns:dc="http://purl.org/dc/elements/1.1/"
++   xmlns:cc="http://web.resource.org/cc/"
++   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
++   xmlns:svg="http://www.w3.org/2000/svg"
++   xmlns="http://www.w3.org/2000/svg"
++   xmlns:xlink="http://www.w3.org/1999/xlink"
++   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
++   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
++   inkscape:export-ydpi="240.00000"
++   inkscape:export-xdpi="240.00000"
++   inkscape:export-filename="/home/jimmac/gfx/novell/pdes/trunk/docs/BIGmime-text.png"
++   sodipodi:docname="application-x-cd-image.svg"
++   sodipodi:docbase="/home/lapo/Desktop/seb/scalable"
++   inkscape:version="0.44+devel"
++   sodipodi:version="0.32"
++   id="svg249"
++   height="48.000000px"
++   width="48.000000px"
++   inkscape:output_extension="org.inkscape.output.svg.inkscape"
++   sodipodi:modified="true">
++  <defs
++     id="defs3">
++    <linearGradient
++       id="linearGradient3702">
++      <stop
++         style="stop-color:black;stop-opacity:0;"
++         offset="0"
++         id="stop3704" />
++      <stop
++         id="stop3710"
++         offset="0.5"
++         style="stop-color:black;stop-opacity:1;" />
++      <stop
++         style="stop-color:black;stop-opacity:0;"
++         offset="1"
++         id="stop3706" />
++    </linearGradient>
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient3688">
++      <stop
++         style="stop-color:black;stop-opacity:1;"
++         offset="0"
++         id="stop3690" />
++      <stop
++         style="stop-color:black;stop-opacity:0;"
++         offset="1"
++         id="stop3692" />
++    </linearGradient>
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient4790">
++      <stop
++         style="stop-color:#000000;stop-opacity:1;"
++         offset="0"
++         id="stop4792" />
++      <stop
++         style="stop-color:#000000;stop-opacity:0;"
++         offset="1"
++         id="stop4794" />
++    </linearGradient>
++    <linearGradient
++       inkscape:collect="always"
++       id="linearGradient2251">
++      <stop
++         style="stop-color:#ffffff;stop-opacity:1;"
++         offset="0"
++         id="stop2253" />
++      <stop
++         style="stop-color:#ffffff;stop-opacity:0;"
++         offset="1"
++         id="stop2255" />
++    </linearGradient>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient2251"
++       id="linearGradient8166"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(-3.277938e-2,-0.999463,0.999463,-3.277938e-2,-0.709646,45.06274)"
++       x1="33.396004"
++       y1="36.921333"
++       x2="34.170048"
++       y2="38.070381" />
++    <linearGradient
++       id="linearGradient15662">
++      <stop
++         id="stop15664"
++         offset="0.0000000"
++         style="stop-color:#ffffff;stop-opacity:1.0000000;" />
++      <stop
++         id="stop15666"
++         offset="1.0000000"
++         style="stop-color:#f8f8f8;stop-opacity:1.0000000;" />
++    </linearGradient>
++    <linearGradient
++       id="linearGradient269">
++      <stop
++         id="stop270"
++         offset="0.0000000"
++         style="stop-color:#a3a3a3;stop-opacity:1.0000000;" />
++      <stop
++         id="stop271"
++         offset="1"
++         style="stop-color:#8a8a8a;stop-opacity:1;" />
++    </linearGradient>
++    <linearGradient
++       id="linearGradient259">
++      <stop
++         id="stop260"
++         offset="0.0000000"
++         style="stop-color:#fafafa;stop-opacity:1.0000000;" />
++      <stop
++         id="stop261"
++         offset="1.0000000"
++         style="stop-color:#bbbbbb;stop-opacity:1.0000000;" />
++    </linearGradient>
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient269"
++       id="radialGradient15656"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.968273,0.000000,0.000000,1.032767,3.353553,0.646447)"
++       cx="8.8244190"
++       cy="3.7561285"
++       fx="8.8244190"
++       fy="3.7561285"
++       r="37.751713" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient259"
++       id="radialGradient15658"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="scale(0.960493,1.041132)"
++       cx="33.966679"
++       cy="35.736916"
++       fx="33.966679"
++       fy="35.736916"
++       r="86.708450" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient15662"
++       id="radialGradient15668"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.968273,0.000000,0.000000,1.032767,3.353553,0.646447)"
++       cx="8.1435566"
++       cy="7.2678967"
++       fx="8.1435566"
++       fy="7.2678967"
++       r="38.158695" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient269"
++       id="radialGradient5350"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.331735,-2.3449e-17,2.501087e-17,0.353831,20.10526,9.5823)"
++       cx="31.863327"
++       cy="2.3667307"
++       fx="31.863327"
++       fy="2.3667307"
++       r="37.751713" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient259"
++       id="radialGradient5352"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.148355,1.009137e-2,-1.104438e-2,0.162365,25.06011,12.81706)"
++       cx="30.653816"
++       cy="14.9373"
++       fx="30.653816"
++       fy="14.9373"
++       r="86.708450" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient4790"
++       id="radialGradient4796"
++       cx="37.030354"
++       cy="12.98915"
++       fx="37.030354"
++       fy="12.98915"
++       r="4.2929165"
++       gradientTransform="matrix(1.744653,2.313551e-22,-1.663e-22,1.283833,-26.58256,-3.478359)"
++       gradientUnits="userSpaceOnUse" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient3688"
++       id="radialGradient3717"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(2.003784,0,0,1.4,27.98813,-17.4)"
++       cx="4.9929786"
++       cy="43.5"
++       fx="4.9929786"
++       fy="43.5"
++       r="2.5" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient3688"
++       id="radialGradient3719"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(2.003784,0,0,1.4,-20.01187,-104.4)"
++       cx="4.9929786"
++       cy="43.5"
++       fx="4.9929786"
++       fy="43.5"
++       r="2.5" />
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient3702"
++       id="linearGradient3721"
++       gradientUnits="userSpaceOnUse"
++       x1="25.058096"
++       y1="47.027729"
++       x2="25.058096"
++       y2="39.999443" />
++    <linearGradient
++       id="linearGradient23419"
++       inkscape:collect="always">
++      <stop
++         id="stop23421"
++         offset="0"
++         style="stop-color:#000000;stop-opacity:1;" />
++      <stop
++         id="stop23423"
++         offset="1"
++         style="stop-color:#000000;stop-opacity:0;" />
++    </linearGradient>
++    <linearGradient
++       y2="34.307499"
++       x2="32.511002"
++       y1="11.1885"
++       x1="14.9966"
++       gradientUnits="userSpaceOnUse"
++       id="aigrd1">
++      <stop
++         id="stop3034"
++         style="stop-color:#EBEBEB"
++         offset="0" />
++      <stop
++         id="stop3036"
++         style="stop-color:#FFFFFF"
++         offset="0.5" />
++      <stop
++         id="stop3038"
++         style="stop-color:#EBEBEB"
++         offset="1" />
++    </linearGradient>
++    <linearGradient
++       y2="14.2033"
++       x2="35.391201"
++       y1="32.4165"
++       x1="12.2744"
++       gradientUnits="userSpaceOnUse"
++       id="aigrd2">
++      <stop
++         id="stop3043"
++         style="stop-color:#FBFBFB"
++         offset="0" />
++      <stop
++         id="stop3045"
++         style="stop-color:#B6B6B6"
++         offset="0.5" />
++      <stop
++         id="stop3047"
++         style="stop-color:#E4E4E4"
++         offset="1" />
++    </linearGradient>
++    <linearGradient
++       id="linearGradient6036"
++       inkscape:collect="always">
++      <stop
++         id="stop6038"
++         offset="0"
++         style="stop-color:#ffffff;stop-opacity:1;" />
++      <stop
++         id="stop6040"
++         offset="1"
++         style="stop-color:#ffffff;stop-opacity:0;" />
++    </linearGradient>
++    <linearGradient
++       id="linearGradient4409"
++       inkscape:collect="always">
++      <stop
++         id="stop4411"
++         offset="0"
++         style="stop-color:#ffffff;stop-opacity:1;" />
++      <stop
++         id="stop4413"
++         offset="1"
++         style="stop-color:#ffffff;stop-opacity:0;" />
++    </linearGradient>
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#aigrd1"
++       id="linearGradient3208"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.780636,0,0,0.802043,-2.599662,-2.968561)"
++       x1="14.9966"
++       y1="11.1885"
++       x2="32.511002"
++       y2="34.307499" />
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#aigrd2"
++       id="linearGradient3210"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.780635,0,0,0.802044,-2.599657,-2.968564)"
++       x1="12.2744"
++       y1="32.4165"
++       x2="35.391201"
++       y2="14.2033" />
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient4409"
++       id="linearGradient3212"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.652518,0,0,0.668628,0.679603,-0.437004)"
++       x1="25.985928"
++       y1="24.919628"
++       x2="15.889072"
++       y2="11.669628" />
++    <linearGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient6036"
++       id="linearGradient3214"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(0.632898,0,0,0.649557,0.726388,-0.68026)"
++       x1="10.50172"
++       y1="3.6100161"
++       x2="48.798885"
++       y2="54.698483" />
++    <radialGradient
++       inkscape:collect="always"
++       xlink:href="#linearGradient23419"
++       id="radialGradient3220"
++       gradientUnits="userSpaceOnUse"
++       gradientTransform="matrix(1,0,0,0.25,0,31.22703)"
++       cx="23.334524"
++       cy="41.63604"
++       fx="23.334524"
++       fy="41.63604"
++       r="22.627417" />
++  </defs>
++  <sodipodi:namedview
++     inkscape:window-y="114"
++     inkscape:window-x="234"
++     inkscape:window-height="872"
++     inkscape:window-width="1085"
++     inkscape:document-units="px"
++     inkscape:grid-bbox="true"
++     showgrid="false"
++     inkscape:current-layer="layer1"
++     inkscape:cy="13.990498"
++     inkscape:cx="34.456319"
++     inkscape:zoom="1"
++     inkscape:pageshadow="2"
++     inkscape:pageopacity="0.0"
++     borderopacity="1"
++     bordercolor="#666"
++     pagecolor="#ffffff"
++     id="base"
++     inkscape:showpageshadow="false" />
++  <metadata
++     id="metadata4">
++    <rdf:RDF>
++      <cc:Work
++         rdf:about="">
++        <dc:format>image/svg+xml</dc:format>
++        <dc:type
++           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
++        <dc:title>Iso Image</dc:title>
++        <dc:subject>
++          <rdf:Bag>
++            <rdf:li>iso</rdf:li>
++            <rdf:li>cd</rdf:li>
++            <rdf:li>image</rdf:li>
++          </rdf:Bag>
++        </dc:subject>
++        <cc:license
++           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
++        <dc:creator>
++          <cc:Agent>
++            <dc:title>Lapo Calamandrei</dc:title>
++          </cc:Agent>
++        </dc:creator>
++        <dc:source></dc:source>
++        <dc:contributor>
++          <cc:Agent>
++            <dc:title>Jakub Steiner</dc:title>
++          </cc:Agent>
++        </dc:contributor>
++      </cc:Work>
++      <cc:License
++         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
++        <cc:permits
++           rdf:resource="http://web.resource.org/cc/Reproduction" />
++        <cc:permits
++           rdf:resource="http://web.resource.org/cc/Distribution" />
++        <cc:requires
++           rdf:resource="http://web.resource.org/cc/Notice" />
++        <cc:permits
++           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
++        <cc:requires
++           rdf:resource="http://web.resource.org/cc/ShareAlike" />
++        <cc:requires
++           rdf:resource="http://web.resource.org/cc/SourceCode" />
++      </cc:License>
++    </rdf:RDF>
++  </metadata>
++  <g
++     inkscape:groupmode="layer"
++     id="layer6"
++     inkscape:label="Shadow">
++    <g
++       id="g3712"
++       style="opacity:0.4"
++       transform="matrix(1.052632,0,0,1.285713,-1.263158,-13.42854)">
++      <rect
++         y="40"
++         x="38"
++         height="7"
++         width="5"
++         id="rect2801"
++         style="opacity:1;fill:url(#radialGradient3717);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
++      <rect
++         transform="scale(-1,-1)"
++         y="-47"
++         x="-10"
++         height="7"
++         width="5"
++         id="rect3696"
++         style="opacity:1;fill:url(#radialGradient3719);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
++      <rect
++         y="40"
++         x="10"
++         height="7.0000005"
++         width="28"
++         id="rect3700"
++         style="opacity:1;fill:url(#linearGradient3721);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
++    </g>
++  </g>
++  <g
++     style="display:inline"
++     inkscape:groupmode="layer"
++     inkscape:label="Base"
++     id="layer1">
++    <path
++       style="color:#000000;fill:url(#radialGradient15658);fill-opacity:1;fill-rule:nonzero;stroke:url(#radialGradient15656);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;visibility:visible;display:block;overflow:visible"
++       d="M 7.7526014,3.6464462 L 31.199616,3.6308212 C 31.199616,3.6308212 41.478553,13.174533 41.478553,13.811106 L 41.478553,43.417892 C 41.478553,44.054465 40.966077,44.56694 40.329504,44.56694 L 7.7526014,44.56694 C 7.1160285,44.56694 6.6035528,44.054465 6.6035528,43.417892 L 6.6035528,4.7954948 C 6.6035528,4.1589219 7.1160285,3.6464462 7.7526014,3.6464462 z "
++       id="rect15391"
++       sodipodi:nodetypes="ccccccccc" />
++    <path
++       style="color:#000000;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:url(#radialGradient15668);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;visibility:visible;display:block;overflow:visible"
++       d="M 7.8151023,4.5839462 L 32.691494,4.5839462 C 32.691494,4.5839462 40.44194,12.605373 40.44194,12.687946 L 40.44194,43.381282 C 40.44194,43.463855 40.375465,43.530331 40.292892,43.530331 L 7.8151023,43.530331 C 7.7325294,43.530331 7.6660538,43.463855 7.6660538,43.381282 L 7.6660538,4.7329948 C 7.6660538,4.6504219 7.7325294,4.5839462 7.8151023,4.5839462 z "
++       id="rect15660"
++       sodipodi:nodetypes="ccccccccc" />
++    <g
++       id="g3222">
++      <path
++         sodipodi:type="arc"
++         style="opacity:0.25;color:black;fill:url(#radialGradient3220);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
++         id="path23417"
++         sodipodi:cx="23.334524"
++         sodipodi:cy="41.63604"
++         sodipodi:rx="22.627417"
++         sodipodi:ry="5.6568542"
++         d="M 45.961941 41.63604 A 22.627417 5.6568542 0 1 1  0.70710754,41.63604 A 22.627417 5.6568542 0 1 1  45.961941 41.63604 z"
++         inkscape:r_cx="true"
++         inkscape:r_cy="true"
++         transform="matrix(0.596621,0,0,0.697996,9.57812,6.282193)" />
++      <g
++         transform="matrix(0.877377,0,0,0.855214,9.33646,12.19624)"
++         id="g2270"
++         inkscape:label="Layer 1">
++        <path
++           inkscape:r_cy="true"
++           inkscape:r_cx="true"
++           id="path3040"
++           d="M 16.1356,1.5228814 C 8.5634317,1.5228814 2.4744725,7.778819 2.4744725,15.558639 C 2.4744725,23.338459 8.5634317,29.594397 16.1356,29.594397 C 23.707769,29.594397 29.796729,23.338459 29.796729,15.558639 C 29.796729,7.778819 23.707769,1.5228814 16.1356,1.5228814 L 16.1356,1.5228814 z M 16.1356,18.927221 C 14.340138,18.927221 12.856929,17.403338 12.856929,15.558639 C 12.856929,13.713939 14.340138,12.190057 16.1356,12.190057 C 17.931063,12.190057 19.414271,13.713939 19.414271,15.558639 C 19.414271,17.403338 17.931063,18.927221 16.1356,18.927221 z "
++           style="fill:url(#linearGradient3208);fill-rule:nonzero;stroke:none;stroke-miterlimit:4" />
++        <path
++           sodipodi:nodetypes="cssscccsssc"
++           inkscape:r_cy="true"
++           inkscape:r_cx="true"
++           id="path3049"
++           d="M 16.135585,1.5228819 C 8.5634244,1.5228819 2.4744714,7.7788247 2.4744714,15.55865 C 2.4744714,23.338477 8.5634244,29.59442 16.135585,29.59442 C 23.707746,29.59442 29.7967,23.338477 29.7967,15.55865 C 29.7967,7.7788247 23.707746,1.5228819 16.135585,1.5228819 L 16.135585,1.5228819 z M 16.135585,19.263131 C 13.803413,19.263131 12.479137,17.843008 12.479137,15.55865 C 12.479137,13.128202 13.948042,11.724981 16.135585,11.724981 C 18.647439,11.724981 19.716478,13.309331 19.716478,15.55865 C 19.716478,17.659454 18.860827,19.263131 16.135585,19.263131 z "
++           style="fill:url(#linearGradient3210);fill-rule:nonzero;stroke:gray;stroke-width:1.15443563;stroke-miterlimit:4;stroke-opacity:1" />
++        <path
++           style="fill:url(#linearGradient3212);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-miterlimit:4;stroke-opacity:1"
++           d="M 15.629142,2.1120279 C 8.6069447,2.3834307 3.0357988,8.275002 3.0357988,15.539693 C 3.0357988,18.833021 4.1758283,21.826388 6.0809911,24.155946 L 13.335263,17.863967 C 12.864576,17.300085 12.650618,16.497848 12.650618,15.706851 C 12.650618,13.439942 14.154209,11.984351 16.283431,11.984351 C 17.251719,11.984351 18.222119,12.434623 18.80115,13.151974 L 26.218553,6.9435717 C 23.820437,3.9854613 20.186497,2.1120279 16.120302,2.1120279 C 15.950151,2.1120279 15.797675,2.1055142 15.629142,2.1120279 z "
++           id="path3531"
++           sodipodi:nodetypes="csccssccsc" />
++        <path
++           inkscape:r_cy="true"
++           inkscape:r_cx="true"
++           id="path3051"
++           d="M 16.1356,7.9546846 C 12.002576,7.9546846 8.7346033,11.411028 8.7346033,15.558639 C 8.7346033,19.805004 12.098694,23.162594 16.1356,23.162594 C 20.268624,23.162594 23.536598,19.706251 23.536598,15.558639 C 23.536598,11.312274 20.172507,7.9546846 16.1356,7.9546846 L 16.1356,7.9546846 z M 16.1356,19.706251 C 13.924913,19.706251 12.098694,17.829951 12.098694,15.558639 C 12.098694,13.287328 13.924913,11.411028 16.1356,11.411028 C 18.346287,11.411028 20.172507,13.287328 20.172507,15.558639 C 20.172507,17.829951 18.346287,19.706251 16.1356,19.706251 z "
++           style="opacity:0.51098902;fill:#eeeeec;fill-rule:nonzero;stroke:none;stroke-miterlimit:4" />
++        <path
++           inkscape:r_cy="true"
++           inkscape:r_cx="true"
++           style="opacity:0.54644811;fill:none;fill-rule:nonzero;stroke:url(#linearGradient3214);stroke-width:1.15443563;stroke-miterlimit:4;stroke-opacity:1"
++           d="M 16.135573,2.6989716 C 9.1904318,2.6989716 3.6056791,8.4307188 3.6056791,15.558659 C 3.6056791,22.686599 9.1904318,28.418346 16.135573,28.418346 C 23.080715,28.418346 28.665468,22.686599 28.665468,15.558659 C 28.665468,8.4307188 23.080715,2.6989716 16.135573,2.6989716 L 16.135573,2.6989716 z "
++           id="path5264"
++           sodipodi:nodetypes="cccccc" />
++        <path
++           inkscape:r_cy="true"
++           inkscape:r_cx="true"
++           sodipodi:type="arc"
++           style="opacity:1;color:black;fill:white;fill-opacity:0.31638417;fill-rule:nonzero;stroke:#eeeeec;stroke-width:1.45839643;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
++           id="path6026"
++           sodipodi:cx="24.306795"
++           sodipodi:cy="24.930641"
++           sodipodi:rx="6.0987959"
++           sodipodi:ry="6.0987959"
++           d="M 30.405591 24.930641 A 6.0987959 6.0987959 0 1 1  18.207999,24.930641 A 6.0987959 6.0987959 0 1 1  30.405591 24.930641 z"
++           transform="matrix(0.726704,0,0,0.746621,-1.496654,-3.042255)" />
++      </g>
++      <path
++         sodipodi:nodetypes="cssscc"
++         inkscape:r_cy="true"
++         inkscape:r_cx="true"
++         id="path3218"
++         d="M 23.493456,22.490718 C 21.826967,22.490718 20.486904,23.832987 20.486904,25.502218 C 20.486904,27.17145 21.826967,28.513719 23.493456,28.513719 C 25.159944,28.513719 26.500008,27.17145 26.500008,25.502218 C 26.500008,23.832987 25.159944,22.490718 23.493456,22.490718 L 23.493456,22.490718 z "
++         style="fill:none;fill-rule:nonzero;stroke:gray;stroke-width:1.00000095;stroke-miterlimit:4;stroke-opacity:1;display:inline" />
++    </g>
++  </g>
++  <g
++     inkscape:groupmode="layer"
++     id="layer5"
++     inkscape:label="Text"
++     style="display:inline">
++    <path
++       inkscape:r_cy="true"
++       inkscape:r_cx="true"
++       style="opacity:0.35714285;color:#000000;fill:url(#radialGradient4796);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00000024;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
++       d="M 40.985189,13.861445 C 40.256827,12.514817 34.882221,10.130934 32.084635,9.3314083 C 32.254143,10.904354 31.961856,15.649439 31.961856,15.649439 C 34.024356,14.274439 40.204485,13.699331 40.985189,13.861445 z "
++       id="path5348"
++       sodipodi:nodetypes="cccc" />
++    <path
++       style="color:#000000;fill:url(#radialGradient5352);fill-opacity:1;fill-rule:nonzero;stroke:url(#radialGradient5350);stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:block;overflow:visible;opacity:1"
++       d="M 41.410559,13.739267 C 41.423724,12.324125 35.058025,3.5320142 31.175441,3.6354934 C 32.148479,3.8684884 32.925796,9.803523 31.536076,12.616023 C 34.286076,12.616023 40.446694,11.881093 41.410559,13.739267 z "
++       id="path2210"
++       sodipodi:nodetypes="cccc"
++       inkscape:r_cx="true"
++       inkscape:r_cy="true" />
++    <path
++       sodipodi:nodetypes="cccc"
++       id="path2247"
++       d="M 39.121563,11.586207 C 38.393201,10.239579 34.963027,6.5166576 33.040441,5.2796316 C 33.279381,6.7054805 33.577496,8.9620596 32.961856,11.524439 C 32.961856,11.524439 38.340859,11.424093 39.121563,11.586207 z "
++       style="opacity:1;color:#000000;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient8166);stroke-width:1.00000024;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"
++       inkscape:r_cx="true"
++       inkscape:r_cy="true" />
++  </g>
++</svg>
+diff -Nur gnome-icon-theme-2.19.91/scalable/mimetypes/Makefile.am gnome-icon-theme-2.19.91.new/scalable/mimetypes/Makefile.am
+--- gnome-icon-theme-2.19.91/scalable/mimetypes/Makefile.am	2007-01-03 22:25:53.000000000 +0100
++++ gnome-icon-theme-2.19.91.new/scalable/mimetypes/Makefile.am	2007-08-30 11:57:05.727199217 +0200
+@@ -5,6 +5,7 @@
+ 
+ icons_DATA =				\
+ 	application-certificate.svg	\
++	application-x-cd-image.svg	\
+ 	application-x-executable.svg	\
+ 	audio-x-generic.svg		\
+ 	font-x-generic.svg		\
+diff -Nur gnome-icon-theme-2.19.91/scalable/mimetypes/Makefile.in gnome-icon-theme-2.19.91.new/scalable/mimetypes/Makefile.in
+--- gnome-icon-theme-2.19.91/scalable/mimetypes/Makefile.in	2007-08-28 01:31:01.000000000 +0200
++++ gnome-icon-theme-2.19.91.new/scalable/mimetypes/Makefile.in	2007-08-30 11:57:05.727199217 +0200
+@@ -197,6 +197,7 @@
+ iconsdir = $(themedir)/$(size)/$(context)
+ icons_DATA = \
+ 	application-certificate.svg	\
++	application-x-cd-image.svg	\
+ 	application-x-executable.svg	\
+ 	audio-x-generic.svg		\
+ 	font-x-generic.svg		\

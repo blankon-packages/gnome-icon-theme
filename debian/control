@@ -1,0 +1,31 @@
+Source: gnome-icon-theme
+Section: gnome
+Priority: optional
+XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Loic Minier <lool@dooz.org>, Marc 'HE' Brockschmidt <he@debian.org>
+Build-Depends: debhelper (>= 5),
+               cdbs,
+               gnome-pkg-tools (>= 0.10),
+               sharutils
+Build-Depends-Indep: gettext,
+                     hicolor-icon-theme,
+                     libxml-parser-perl,
+                     pkg-config,
+                     icon-naming-utils (>= 0.8.6)
+Standards-Version: 3.7.2
+
+Package: gnome-icon-theme
+Architecture: all
+Section: gnome
+Depends: ${misc:Depends},
+         hicolor-icon-theme,
+         librsvg2-common
+Replaces: kdebase (<< 4:3.2.2-1),
+          gnome-panel-data (<= 2.9.91-1)
+Enhances: nautilus (>= 2.2)
+Description: GNOME Desktop icon theme
+ This package contains the default icon theme used by the GNOME desktop.
+ The icons are used in the panel menu, and in nautilus and other
+ applications, to represent the different applications, files,
+ directories, and devices.
