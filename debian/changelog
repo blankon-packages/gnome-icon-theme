@@ -1,8 +1,5 @@
-gnome-icon-theme (2.20.0-0ubuntu1-0blankon1) konde; urgency=low
+PACKAGE (VERSION) UNRELEASED; urgency=low
 
-  * Initial import from gnome-icon-theme_2.20.0-0ubuntu1
-  * debian/control: Changed maintainter to BlankOn Developers
-  * debian/patches/02-fix-distributor-logo.patch
-        Changed to BlankOn logo
+  * Initial release. (Closes: #XXXXXX)
 
- -- Andy Apdhani <imtheface@ubuntu.com>  Fri, 09 Nov 2007 12:10:56 +0700
+ -- somat <qcinsp@qcinsp>  Thu, 13 Dec 2007 20:05:21 +0700
