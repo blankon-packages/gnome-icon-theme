@@ -1,3 +1,10 @@
+gnome-icon-theme (2.22.0-1ubuntu1-0blankon1) lontara; urgency=low
+
+  * Lontara release 1
+  * Initial import from gnome-icon-theme_2.22.0-1ubuntu1
+
+ -- Muhammad Bayu <rametux@gmail.com>  Tue, 25 Mar 2008 00:35:01 +0700
+
 gnome-icon-theme (2.20.0-0ubuntu1-0blankon1) lontara; urgency=low
 
   * impor dari 2.20.0-0ubuntu1-0blankon1

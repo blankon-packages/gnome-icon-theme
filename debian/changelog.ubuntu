@@ -1,57 +1,54 @@
-gnome-icon-theme (2.20.0-0ubuntu1) gutsy; urgency=low
+gnome-icon-theme (2.22.0-1ubuntu1) hardy; urgency=low
 
-  * New upstream release: 
-    - Updated system-lock-screen icon to fill all sizes
-    - Updated accessories-text-editor icon to fill all sizes
-    - Updated 24x24 utilities-terminal icon from 22x22 icon
-
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 18 Sep 2007 11:49:17 +0200
-
-gnome-icon-theme (2.19.91-0ubuntu2) gutsy; urgency=low
-
-  * Rebuild with new icon-naming-utils version
-
- -- Sebastien Bacher <seb128@canonical.com>  Fri, 31 Aug 2007 12:59:59 +0200
-
-gnome-icon-theme (2.19.91-0ubuntu1) gutsy; urgency=low
-
-  * New upstream version
-  * debian/patches/02-fix-distributor-logo.patch
-    - Updated
-
- -- Aron Sisak <aron@ubuntu.hu>  Thu, 30 Aug 2007 11:44:54 +0200
-
-gnome-icon-theme (2.19.90-0ubuntu1) gutsy; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 14 Aug 2007 13:07:38 +0200
-
-gnome-icon-theme (2.19.6-0ubuntu1) gutsy; urgency=low
-
-  * New upstream release
-
- -- Aron Sisak <aron@ubuntu.hu>  Fri, 03 Aug 2007 21:53:32 +0200
-
-gnome-icon-theme (2.19.1-0ubuntu1) gutsy; urgency=low
-
-  * New upstream release
-
- -- Aron Sisak <aron@ubuntu.hu>  Sat, 30 Jun 2007 17:16:43 +0200
-
-gnome-icon-theme (2.18.0-2ubuntu1) gutsy; urgency=low
-
-  * Resynchronized with Debian, remaining Ubuntu changes:
-    - debian/rules: patch uuencoded icons.
-    - debian/control: add sharutils to Build-Depends.
-    - debian/patches/01_apps_icons_scalable.patch,
-      debian/patches/02-fix-distributor-logo.patch,
-      debian/patches/10_add_application-x-cd-image.patch: Distro patches.
-    - debian/gnome-icon-theme.links: dropped, GNOME uses the new mimetype now.
+  * Sync on Debian
   * debian/control.in:
-    - Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>.
+    - Build-Depends on sharutils
+    - updated maintainer information
+  * debian/patches/02-fix-distributor-logo.patch:
+    - Ubuntu distributor icons
+  * debian/patches/10_add_application-x-cd-image.patch:
+    - add iso icons
+  * debian/rules:
+    - install distributor icons
 
- -- Daniel Holbach <daniel.holbach@ubuntu.com>  Tue, 01 May 2007 15:24:13 +0200
+ -- Sebastien Bacher <seb128@canonical.com>  Fri, 21 Mar 2008 18:03:41 +0100
+
+gnome-icon-theme (2.22.0-1) unstable; urgency=low
+
+  * debian/patches/01_apps_icons_scalable.patch:
+    + Drop accidentially included patch that was just added for testing
+      purposes and was forgotten to be removed for the final upload.
+  * New upstream stable release.
+  * debian/control.in:
+    + Update Standards-Version to 3.7.3, no additional changes needed.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 12 Mar 2008 08:33:28 +0100
+
+gnome-icon-theme (2.20.0-1) unstable; urgency=low
+
+  * New upstream release:
+    + debian/gnome-icon-theme.links:
+      - Dropped as Gnome uses the correct mimetypes now.
+    + debian/control.in:
+      - Update icon-naming-utils minimum build dependency to (>= 0.8.6).
+  * debian/patches/01_apps_icons_scalable.patch:
+    + Patch taken from Ubuntu to use scalable application icons.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 20 Sep 2007 21:22:13 +0200
+
+gnome-icon-theme (2.18.0-3) unstable; urgency=low
+
+  [ Loic Minier ]
+  * Drop 48x48 symlink for gnome-mime-application-vnd.ms-word; thanks giggz;
+    closes: #421383.
+
+  [ Josselin Mouette ]
+  * Include gnome-mime-application-vnd.ms-word links for 22x22 and 24x24
+    sizes.
+  * Conflict with gnome-panel < 2.18 and gnome-themes-extras < 
+    0.9.0.deb0.1 (closes: #422933).
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 09 May 2007 10:32:35 +0200
 
 gnome-icon-theme (2.18.0-2) unstable; urgency=low
 
