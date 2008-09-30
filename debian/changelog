@@ -1,3 +1,9 @@
+gnome-icon-theme (2.24.0-0ubuntu1-0blankon1) meuligoe; urgency=low
+
+  * Perbaharui upstream ke versi 2.24.0-0ubuntu1
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Tue, 30 Sep 2008 19:06:22 +0200
+
 gnome-icon-theme (2.23.3-0ubuntu1-0blankon1) meuligoe; urgency=low
 
   * Meuligoe release

@@ -1,8 +1,8 @@
 Source: gnome-icon-theme
 Section: gnome
 Priority: optional
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>
+Maintainer: BlankOn Developers <BlankOn@googlegroups.com>
+XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>, Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 5),
                cdbs,
@@ -12,7 +12,7 @@ Build-Depends-Indep: gettext,
                      hicolor-icon-theme,
                      libxml-parser-perl,
                      pkg-config,
-                     icon-naming-utils (>= 0.8.6)
+                     icon-naming-utils (>= 0.8.7)
 Standards-Version: 3.7.3
 
 Package: gnome-icon-theme

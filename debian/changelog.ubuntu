@@ -1,3 +1,50 @@
+gnome-icon-theme (2.24.0-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Sep 2008 22:30:47 +0200
+
+gnome-icon-theme (2.23.92-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Sep 2008 14:33:57 +0200
+
+gnome-icon-theme (2.23.91-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 01 Sep 2008 10:21:32 +0200
+
+gnome-icon-theme (2.23.90-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 19 Aug 2008 01:10:02 +0200
+
+gnome-icon-theme (2.23.3-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 21 Jul 2008 17:43:07 +0200
+
+gnome-icon-theme (2.23.2-0ubuntu1) intrepid; urgency=low
+
+  * New upstream version
+  * debian/control.in:
+    - updated icon-naming-utils requirement
+  * debian/rules:
+    - use the --enable-icon-mapping configure option
+
+ -- Sebastien Bacher <seb128@canonical.com>  Mon, 16 Jun 2008 23:50:23 +0200
+
+gnome-icon-theme (2.22.0-1ubuntu2) hardy; urgency=low
+
+  * debian/patches/10_add_application-x-cd-image.patch:
+    - Updated iso icons, thanks to Lap Calamandrei
+
+ -- Sebastien Bacher <seb128@canonical.com>  Tue, 01 Apr 2008 15:23:43 +0200
+
 gnome-icon-theme (2.22.0-1ubuntu1) hardy; urgency=low
 
   * Sync on Debian
