@@ -1,3 +1,9 @@
+gnome-icon-theme (2.24.0-0ubuntu1-0blankon2) meuligoe; urgency=low
+
+  * New logo for meuligoe
+
+ -- Andy Apdhani <imtheface@ubuntu.com>  Thu, 13 Nov 2008 05:32:19 +0700
+
 gnome-icon-theme (2.24.0-0ubuntu1-0blankon1) meuligoe; urgency=low
 
   * Perbaharui upstream ke versi 2.24.0-0ubuntu1
