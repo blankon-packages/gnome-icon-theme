@@ -1,64 +1,93 @@
-gnome-icon-theme (2.24.0-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 23 Sep 2008 22:30:47 +0200
-
-gnome-icon-theme (2.23.92-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 09 Sep 2008 14:33:57 +0200
-
-gnome-icon-theme (2.23.91-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@canonical.com>  Mon, 01 Sep 2008 10:21:32 +0200
-
-gnome-icon-theme (2.23.90-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 19 Aug 2008 01:10:02 +0200
-
-gnome-icon-theme (2.23.3-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-
- -- Sebastien Bacher <seb128@canonical.com>  Mon, 21 Jul 2008 17:43:07 +0200
-
-gnome-icon-theme (2.23.2-0ubuntu1) intrepid; urgency=low
-
-  * New upstream version
-  * debian/control.in:
-    - updated icon-naming-utils requirement
-  * debian/rules:
-    - use the --enable-icon-mapping configure option
-
- -- Sebastien Bacher <seb128@canonical.com>  Mon, 16 Jun 2008 23:50:23 +0200
-
-gnome-icon-theme (2.22.0-1ubuntu2) hardy; urgency=low
-
-  * debian/patches/10_add_application-x-cd-image.patch:
-    - Updated iso icons, thanks to Lap Calamandrei
-
- -- Sebastien Bacher <seb128@canonical.com>  Tue, 01 Apr 2008 15:23:43 +0200
-
-gnome-icon-theme (2.22.0-1ubuntu1) hardy; urgency=low
+gnome-icon-theme (2.28.0-1ubuntu1) lucid; urgency=low
 
   * Sync on Debian
   * debian/control.in:
     - Build-Depends on sharutils
-    - updated maintainer information
-  * debian/patches/02-fix-distributor-logo.patch:
-    - Ubuntu distributor icons
-  * debian/patches/10_add_application-x-cd-image.patch:
-    - add iso icons
+    - Don't require librsvg2-bin
+    - Set vcs url
+  * debian/patches/03-update-translatable-emblems.patch:
+    - Made some emblems translatable
+  * debian/patches/99_autotools.patch:
+    - Recreate build system.
   * debian/rules:
-    - install distributor icons
+    - Install distributor icons
+    - Use the --enable-icon-mapping configure option
+  * debian/ubuntu-icons: 
+    - ubuntu logo and cd isos logos
+  * debian/watch: 
+    - Watch unstable versions
 
- -- Sebastien Bacher <seb128@canonical.com>  Fri, 21 Mar 2008 18:03:41 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 04 Dec 2009 15:18:46 +0100
+
+gnome-icon-theme (2.28.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    - bumped standards-version to 3.8.3. No changes needed.
+
+ -- Andrea Veri <andrea.veri89@gmail.com>  Mon, 28 Sep 2009 20:45:42 +0200
+
+gnome-icon-theme (2.26.0-1) unstable; urgency=low
+
+  [ Josselin Mouette ]
+  * README.Debian: document how to change the main menu icon.
+
+  [ Luca Bruno ]
+  * New upstream release.
+  * debian/copyright:
+    - Specify GPL version 2.
+
+  [ Josselin Mouette ]
+  * Remove the bunch of empty directories in /usr/share/locale.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 29 May 2009 12:35:16 +0200
+
+gnome-icon-theme (2.24.0-4) unstable; urgency=low
+
+  * Add missing build-dependency on librsvg2-bin.
+  * start-here.svg: fix the colors so that they match the original 
+    Debian swirl, and integrate better.
+  * Rebuild against a recent icon-naming-utils. Closes: #514995.
+  * Rename start-here.svg to swirl-foot.svg, also provide a 
+    debian-swirl.svg icon.
+  * Use alternatives to select the default icon, the highest priority 
+    goes to debian-swirl according to the poll. Closes: #516566.
+  * Handle icon caches by hand; pass --no-act to dh_icons.
+    Closes: #484684.
+  * Register a trigger so that the cache is regerenerated when 
+    necessary.
+  * Depend on libgtk2.0-bin to have gtk-update-icon-cache.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 25 Mar 2009 15:02:01 +0100
+
+gnome-icon-theme (2.24.0-3) unstable; urgency=low
+
+  * debian/start-here.svg: ship a Debian/GNOME logo for the menu.
+  * rules: replace the standard icons with it. Closes: #516566.
+  * Standards version is 3.8.1.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 20 Mar 2009 00:33:37 +0100
+
+gnome-icon-theme (2.24.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 06 Mar 2009 17:58:48 +0100
+
+gnome-icon-theme (2.24.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control.in:
+    + Update Standards-Version to 3.8.0, no additional changes needed.
+    + Bump icon-naming-utils minimum build dependency to (>= 0.8.7).
+    + Add intltool (>= 0.40.0) build dependency
+    + Dropped libxml-parser-perl build dependency
+  * debian/copyright:
+    + Updated to reflect AUTHORS
+    + Change downloaded from URL to
+      <http://download.gnome.org/sources/gnome-icon-theme/>
+
+ -- Luca Bruno <lethalman88@gmail.com>  Mon, 08 Dec 2008 11:02:28 +0100
 
 gnome-icon-theme (2.22.0-1) unstable; urgency=low
 
