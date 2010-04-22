@@ -1,3 +1,9 @@
+gnome-icon-theme (2.28.0-1ubuntu1+blankon3) ombilin; urgency=low
+
+  * id_only.patch
+
+ -- Zay Vladislas <zay.malmstein@gmail.com>  Thu, 22 Apr 2010 15:40:45 +0000
+
 gnome-icon-theme (2.28.0-1ubuntu1+blankon2) ombilin; urgency=low
 
   * membangun paket .deb
