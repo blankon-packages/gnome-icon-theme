@@ -1,3 +1,9 @@
+gnome-icon-theme (2.28.0-1ubuntu1+blankon5) ombilin; urgency=low
+
+  * unchange, id_only.patch ketinggalan
+
+ -- Zay Vladislas <zay.malmstein@gmail.com>  Thu, 22 Apr 2010 16:29:45 +0000
+
 gnome-icon-theme (2.28.0-1ubuntu1+blankon4) ombilin; urgency=low
 
   * chmod +x debian/patches/id_only.patch
