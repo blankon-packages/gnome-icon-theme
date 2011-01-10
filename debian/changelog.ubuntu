@@ -1,23 +1,87 @@
-gnome-icon-theme (2.28.0-1ubuntu1) lucid; urgency=low
+gnome-icon-theme (2.31.0-0ubuntu2) natty; urgency=low
 
-  * Sync on Debian
+  * No-change upload to optimize PNGs.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 13 Dec 2010 12:18:36 +0100
+
+gnome-icon-theme (2.31.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 13 Aug 2010 15:55:13 +1000
+
+gnome-icon-theme (2.30.3-1ubuntu2) maverick; urgency=low
+
+  * debian/rules:
+    - don't install some of the 256x256 icons since they are quite costy
+      on the installation and not really useful
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 29 Jun 2010 17:31:12 +0200
+
+gnome-icon-theme (2.30.3-1ubuntu1) maverick; urgency=low
+
+  * Merge with Debian unstable, remaining Ubuntu changes:
   * debian/control.in:
-    - Build-Depends on sharutils
-    - Don't require librsvg2-bin
-    - Set vcs url
-  * debian/patches/03-update-translatable-emblems.patch:
-    - Made some emblems translatable
-  * debian/patches/99_autotools.patch:
-    - Recreate build system.
+    - Add Vcs-Bzr link
   * debian/rules:
     - Install distributor icons
     - Use the --enable-icon-mapping configure option
+  * debian/prerm:
+  * debian/postinst:
+    - Update alternatives for Ubuntu icon
+  * debian/source:
+    - Use source version 3.0
   * debian/ubuntu-icons: 
-    - ubuntu logo and cd isos logos
+    - Ubuntu logo and cd isos logos
   * debian/watch: 
     - Watch unstable versions
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 04 Dec 2009 15:18:46 +0100
+ -- Robert Ancell <robert.ancell@canonical.com>  Thu, 10 Jun 2010 11:50:31 +1000
+
+gnome-icon-theme (2.30.3-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 26 May 2010 16:33:11 +0200
+
+gnome-icon-theme (2.30.2.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 29 Apr 2010 18:01:18 +0200
+
+gnome-icon-theme (2.30.2-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 28 Apr 2010 14:16:53 +0200
+
+gnome-icon-theme (2.30.1-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sat, 17 Apr 2010 10:13:20 +0200
+
+gnome-icon-theme (2.30.0-2) unstable; urgency=low
+
+  * Break netspeed << 0.15.2-2. Closes: #576840.
+  * Also break rhythmbox << 0.12.8.
+  * Distribute gnome-foot.svg from the 2.28 package.
+  * Install the SVG versions just for our three versions of start-here.
+  * Revert the alternative change. Closes: #576614.
+  * Keep a prerm for the moment to handle upgrades from 2.30.0-1.
+
+ -- Josselin Mouette <joss@debian.org>  Wed, 07 Apr 2010 22:00:27 +0200
+
+gnome-icon-theme (2.30.0-1) unstable; urgency=low
+
+  * New upstream stable release:
+    + debian/rules,
+      debian/preinst,
+      debian/postinst:
+      - The SVG icons are not installed anymore.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 05 Apr 2010 20:26:34 +0200
 
 gnome-icon-theme (2.28.0-1) unstable; urgency=low
 

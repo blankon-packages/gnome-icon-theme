@@ -1,29 +1,32 @@
 Source: gnome-icon-theme
 Section: gnome
 Priority: optional
-Maintainer: BlankOn Developers <BlankOn@googlegroups.com>
-XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>, Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 5),
                cdbs,
-               gnome-pkg-tools (>= 0.10),
-               sharutils
+               gnome-pkg-tools (>= 0.10)
 Build-Depends-Indep: gettext,
                      hicolor-icon-theme,
-                     libxml-parser-perl,
+                     intltool (>= 0.40.0),
                      pkg-config,
-                     icon-naming-utils (>= 0.8.7)
-Standards-Version: 3.7.3
+                     icon-naming-utils (>= 0.8.7),
+                     librsvg2-bin
+Standards-Version: 3.8.3
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/gnome-icon-theme/ubuntu
 
 Package: gnome-icon-theme
 Architecture: all
 Section: gnome
 Depends: ${misc:Depends},
          hicolor-icon-theme,
+         libgtk2.0-bin,
          librsvg2-common
 Replaces: kdebase (<< 4:3.2.2-1),
           gnome-panel-data (<= 2.9.91-1)
 Conflicts: gnome-panel (<< 2.18), gnome-themes-extras (<< 0.9.0.deb0.1)
+Breaks: netspeed (<< 0.15.2-2), rhythmbox (<< 0.12.8)
 Enhances: nautilus (>= 2.2)
 Description: GNOME Desktop icon theme
  This package contains the default icon theme used by the GNOME desktop.

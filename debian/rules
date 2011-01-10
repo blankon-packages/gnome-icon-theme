@@ -7,23 +7,31 @@ include /usr/share/cdbs/1/rules/utils.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
+BITMAPS := $(shell ls gnome | sed -rn 's/^([0-9]+)x[0-9]+$$/\1/p')
+
+INSTDIR := $(CURDIR)/debian/gnome-icon-theme/usr/share/icons/gnome
+
+DEB_DH_ICONS_ARGS := --no-act
+
 DEB_CONFIGURE_EXTRA_FLAGS := --enable-icon-mapping
 
-post-patches::
-	if [ -d debian/patched-icons ]; then \
-		for i in $$(find debian/patched-icons/ -name '*.uue'); do \
-			iconname=$${i##debian/patched-icons/}; \
-			mv $${iconname%.uue} $${iconname%.uue}.old; \
-			uudecode $$i -o $${iconname%.uue}; \
+install/gnome-icon-theme::
+	rm -rf $(CURDIR)/debian/gnome-icon-theme/usr/share/locale
+	mkdir -p $(INSTDIR)/scalable/places
+	cp debian/*.svg $(INSTDIR)/scalable/places/
+	for i in $(BITMAPS); do \
+		d=$${i}x$${i} ; \
+		if [ -d $(INSTDIR)/$$d/places ]; then \
+			mv $(INSTDIR)/$$d/places/start-here.png $(INSTDIR)/$$d/places/gnome-foot.png ; \
+			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/debian-swirl.png debian/debian-swirl.svg ; \
+			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/swirl-foot.png debian/swirl-foot.svg ; \
+		fi ; \
+	done
+	if [ -d debian/blankon-icons ]; then \
+		for i in $$(find debian/blankon-icons/ -name '*.svg' -o -name '*.png'); do \
+			iconname=$${i##debian/blankon-icons/}; \
+			cp $$i $(INSTDIR)/$$iconname; \
 		done; \
 	fi
+	rm -r $(INSTDIR)/256x256/emblems $(INSTDIR)/256x256/emotes $(INSTDIR)/256x256/status
 
-
-clean::
-	if [ -d debian/patched-icons ]; then \
-		for i in $$(find debian/patched-icons/ -name '*.uue'); do \
-			iconname=$${i##debian/patched-icons/}; \
-			mv $${iconname%.uue}.old; $${iconname%.uue}; \
-			rm $${i%.uue}; \
-		done; \
-	fi
