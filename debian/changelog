@@ -1,3 +1,9 @@
+gnome-icon-theme (3.2.0-0ubuntu1+blankon1) rote; urgency=low
+
+  * New upstream release
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 07 Oct 2011 07:08:17 +0700
+
 gnome-icon-theme (2.31.0-0ubuntu2+blankon1) pattimura; urgency=low
 
   * New upstream release

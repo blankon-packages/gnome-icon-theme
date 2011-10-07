@@ -1,22 +1,39 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/gnome.mk
 include /usr/share/cdbs/1/rules/utils.mk
 include /usr/share/gnome-pkg-tools/1/rules/uploaders.mk
--include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
+include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 BITMAPS := $(shell ls gnome | sed -rn 's/^([0-9]+)x[0-9]+$$/\1/p')
 
-INSTDIR := $(CURDIR)/debian/gnome-icon-theme/usr/share/icons/gnome
+INSTDIR := $(CURDIR)/debian/gnome-icon-theme-full/usr/share/icons/gnome
 
 DEB_DH_ICONS_ARGS := --no-act
 
-DEB_CONFIGURE_EXTRA_FLAGS := --enable-icon-mapping
-
 install/gnome-icon-theme::
-	rm -rf $(CURDIR)/debian/gnome-icon-theme/usr/share/locale
+	dh_install -p gnome-icon-theme debian/tmp/usr/share/pkgconfig
+	dh_install -p gnome-icon-theme-full debian/tmp/usr/share/icons
+	rm $(CURDIR)/debian/gnome-icon-theme-full/usr/share/icons/gnome/icon-theme.cache
+
+	# keep icons which are not shipped by humanity in g-i-t; do a [ -e ]
+	# check to ensure that we don't copy dangling symlinks
+	set -ex; cd $(CURDIR)/debian/gnome-icon-theme-full; \
+	for name in `cat ../not-in-humanity.txt`; do \
+	    for i in usr/share/icons/gnome/*/*/$${name}.png; do \
+	        [ -e $$i ] || continue; \
+	    	if echo "$$i" | grep -q 256x256; then continue; fi; \
+	        mkdir -p ../gnome-icon-theme/`dirname $$i`; \
+		if [ -L $$i ]; then \
+		    mv `dirname $$i`/`readlink $$i` ../gnome-icon-theme/`dirname $$i`; \
+	        fi; \
+	        mv $$i ../gnome-icon-theme/`dirname $$i`; \
+		if ! [ -e ../gnome-icon-theme/$$i ]; then echo "broken: $$i"; exit 1; fi; \
+	    done; \
+	done; \
+	mv usr/share/icons/gnome/index.theme ../gnome-icon-theme/usr/share/icons/gnome/
+
 	mkdir -p $(INSTDIR)/scalable/places
 	cp debian/*.svg $(INSTDIR)/scalable/places/
 	for i in $(BITMAPS); do \
@@ -33,5 +50,3 @@ install/gnome-icon-theme::
 			cp $$i $(INSTDIR)/$$iconname; \
 		done; \
 	fi
-	rm -r $(INSTDIR)/256x256/emblems $(INSTDIR)/256x256/emotes $(INSTDIR)/256x256/status
-
