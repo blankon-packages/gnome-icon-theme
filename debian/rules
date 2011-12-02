@@ -8,45 +8,19 @@ include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 BITMAPS := $(shell ls gnome | sed -rn 's/^([0-9]+)x[0-9]+$$/\1/p')
 
-INSTDIR := $(CURDIR)/debian/gnome-icon-theme-full/usr/share/icons/gnome
+INSTDIR := $(CURDIR)/debian/gnome-icon-theme/usr/share/icons/gnome
 
 DEB_DH_ICONS_ARGS := --no-act
 
 install/gnome-icon-theme::
-	dh_install -p gnome-icon-theme debian/tmp/usr/share/pkgconfig
-	dh_install -p gnome-icon-theme-full debian/tmp/usr/share/icons
-	rm $(CURDIR)/debian/gnome-icon-theme-full/usr/share/icons/gnome/icon-theme.cache
-
-	# keep icons which are not shipped by humanity in g-i-t; do a [ -e ]
-	# check to ensure that we don't copy dangling symlinks
-	set -ex; cd $(CURDIR)/debian/gnome-icon-theme-full; \
-	for name in `cat ../not-in-humanity.txt`; do \
-	    for i in usr/share/icons/gnome/*/*/$${name}.png; do \
-	        [ -e $$i ] || continue; \
-	    	if echo "$$i" | grep -q 256x256; then continue; fi; \
-	        mkdir -p ../gnome-icon-theme/`dirname $$i`; \
-		if [ -L $$i ]; then \
-		    mv `dirname $$i`/`readlink $$i` ../gnome-icon-theme/`dirname $$i`; \
-	        fi; \
-	        mv $$i ../gnome-icon-theme/`dirname $$i`; \
-		if ! [ -e ../gnome-icon-theme/$$i ]; then echo "broken: $$i"; exit 1; fi; \
-	    done; \
-	done; \
-	mv usr/share/icons/gnome/index.theme ../gnome-icon-theme/usr/share/icons/gnome/
-
+	rm -r $(CURDIR)/debian/gnome-icon-theme/usr/share/locale
+	rm $(CURDIR)/debian/gnome-icon-theme/usr/share/icons/gnome/icon-theme.cache
 	mkdir -p $(INSTDIR)/scalable/places
 	cp debian/*.svg $(INSTDIR)/scalable/places/
 	for i in $(BITMAPS); do \
 		d=$${i}x$${i} ; \
 		if [ -d $(INSTDIR)/$$d/places ]; then \
 			mv $(INSTDIR)/$$d/places/start-here.png $(INSTDIR)/$$d/places/gnome-foot.png ; \
-			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/debian-swirl.png debian/debian-swirl.svg ; \
-			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/swirl-foot.png debian/swirl-foot.svg ; \
+			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/blankon-oi.png.png debian/blankon-oi.svg ; \
 		fi ; \
 	done
-	if [ -d debian/blankon-icons ]; then \
-		for i in $$(find debian/blankon-icons/ -name '*.svg' -o -name '*.png'); do \
-			iconname=$${i##debian/blankon-icons/}; \
-			cp $$i $(INSTDIR)/$$iconname; \
-		done; \
-	fi
