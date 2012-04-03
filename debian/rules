@@ -21,6 +21,6 @@ install/gnome-icon-theme::
 		d=$${i}x$${i} ; \
 		if [ -d $(INSTDIR)/$$d/places ]; then \
 			mv $(INSTDIR)/$$d/places/start-here.png $(INSTDIR)/$$d/places/gnome-foot.png ; \
-			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/blankon-oi.png.png debian/blankon-oi.svg ; \
+			rsvg-convert -w $$i -h $$i -o $(INSTDIR)/$$d/places/debian-swirl.png debian/debian-swirl.svg ; \
 		fi ; \
 	done

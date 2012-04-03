@@ -1,11 +1,30 @@
-gnome-icon-theme (3.2.1.2-1blankon1) rote; urgency=low
+gnome-icon-theme (3.4.0-2blankon1) rote; urgency=low
 
   * debian/postinst to blankon
   * debian/prem to blankon
   * debian/control, in  Maintainer
-  * Added blankon-oi.svg
+  * Added blankon-oi.svg 
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 02 Dec 2011 14:12:27 +0700
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 03 Apr 2012 21:34:42 +0700
+
+gnome-icon-theme (3.4.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Bump Standards-Version to 3.9.3.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 01 Apr 2012 06:23:01 +0200
+
+gnome-icon-theme (3.4.0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 29 Mar 2012 10:46:27 +0200
+
+gnome-icon-theme (3.3.91-1) experimental; urgency=low
+
+  * New upstream development release.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 16 Mar 2012 04:29:39 +0100
 
 gnome-icon-theme (3.2.1.2-1) unstable; urgency=low
 
