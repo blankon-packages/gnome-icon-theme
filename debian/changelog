@@ -4,8 +4,9 @@ gnome-icon-theme (3.4.0-2blankon1) rote; urgency=low
   * debian/prem to blankon
   * debian/control, in  Maintainer
   * Added blankon-oi.svg 
+  * debian/rules include blankon-oi
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 03 Apr 2012 21:34:42 +0700
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 03 Apr 2012 21:36:18 +0700
 
 gnome-icon-theme (3.4.0-2) unstable; urgency=low
 
