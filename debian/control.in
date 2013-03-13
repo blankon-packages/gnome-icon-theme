@@ -1,7 +1,7 @@
 Source: gnome-icon-theme
 Section: gnome
 Priority: optional
-Maintainer: Rahman Yusri Aftian <aftian@di.blankon.in>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-Original-Maintainer: Josselin Mouette <joss@debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 8),
