@@ -1,3 +1,18 @@
+gnome-icon-theme (3.8.3-1blankon1) suroboyo; urgency=low
+
+  * New Upstream Release
+  * Merge Whit debian
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 17 Sep 2013 22:54:29 +0700
+
+gnome-icon-theme (3.8.3-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * debian/rules: No longer necessary to remove icon-theme.cache manually
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Aug 2013 12:48:03 +0200
+
 gnome-icon-theme (3.8.2-2blankon1) suroboyo; urgency=low
 
   * New Upstream Updates 
