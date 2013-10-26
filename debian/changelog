@@ -1,3 +1,16 @@
+gnome-icon-theme (3.10.0-1blankon1) suroboyo; urgency=low
+
+  * New Upstream Release 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 26 Oct 2013 20:05:07 +0700
+
+gnome-icon-theme (3.10.0-1) unstable; urgency=low
+
+  [ Jackson Doak ]
+  * New upstream release (build fixes)
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 23 Oct 2013 00:51:59 +0200
+
 gnome-icon-theme (3.10.0-0blankon1) suroboyo; urgency=low
 
   * New Upstream Release
