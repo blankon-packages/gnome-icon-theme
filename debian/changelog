@@ -1,3 +1,29 @@
+gnome-icon-theme (3.12.0-2blankon1) tambora; urgency=medium
+
+  * New Upstream Updates 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 02 Jul 2016 08:32:36 +0700
+
+gnome-icon-theme (3.12.0-2) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Add "Multi-arch: foreign" (Closes: #762035)
+    Thanks to David Kozub.
+
+  [ Laurent Bigonville ]
+  * Drop the libgtk-3-bin and libgtk2.0-bin (build-)dependencies and pull
+    gtk-update-icon-cache instead (Closes: #580336)
+  * debian/postinst:
+    - Use gtk-update-icon-cache executable instead of gtk-update-icon-cache-3.0
+    - Do not hardcode the paths of gtk-update-icon-cache but rely on PATH to
+      check if it is installed
+  * debian/control.in:
+    - Drop obsolete Breaks from pre-wheezy.
+    - Bump Standards-Version to 3.9.8 (no further changes)
+    - Remove duplicate Section field
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 23 May 2016 01:30:43 +0200
+
 gnome-icon-theme (3.12.0-1blankon2) tambora; urgency=low
 
   * Just Rebuild 
