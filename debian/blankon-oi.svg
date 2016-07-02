@@ -20,8 +20,8 @@
    height="48"
    id="svg1"
    sodipodi:version="0.32"
-   inkscape:version="0.48.1 r9760"
-   sodipodi:docname="debian-swirl.svg"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="blankon-oi.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <sodipodi:namedview
      id="base"
@@ -31,7 +31,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="131.12121"
+     inkscape:cx="74.552667"
      inkscape:cy="7.7539262"
      inkscape:window-width="1016"
      inkscape:window-height="713"
@@ -60,27 +60,26 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="g3395"
-     transform="matrix(0.70716073,0,0,0.78037456,-126.4225,-124.31044)">
+     id="g4139">
     <path
        inkscape:export-ydpi="285.01001"
        inkscape:export-xdpi="285.01001"
        inkscape:export-filename="/home/mdamt/rect4269.png"
        inkscape:connector-curvature="0"
        id="path3497-0"
-       d="m 228.62253,190.11774 c 0,11.40027 -9.24174,20.64202 -20.64205,20.64202 -11.40025,0 -20.64199,-9.24175 -20.64199,-20.64202 0,-11.40027 9.24174,-20.64202 20.64199,-20.64202 11.40031,0 20.64205,9.24175 20.64205,20.64202 z"
-       style="fill:none;stroke:#000000;stroke-width:10.60067558;stroke-miterlimit:4;stroke-dasharray:none" />
+       d="m 35.250375,24.052608 c 0,8.89648 -6.535395,16.108507 -14.597247,16.108507 -8.061809,0 -14.5972047,-7.212027 -14.5972047,-16.108507 0,-8.896481 6.5353957,-16.1085076 14.5972047,-16.1085076 8.061852,0 14.597247,7.2120266 14.597247,16.1085076 z"
+       style="fill:#ffffff;stroke:#000000;stroke-width:7.87488413;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0" />
     <path
        inkscape:export-ydpi="285.01001"
        inkscape:export-xdpi="285.01001"
        inkscape:connector-curvature="0"
        id="rect4269-4"
-       d="m 237.87123,169.15378 0.48451,0 0,44.30357 -0.48451,0 z"
-       style="fill:#aa0000;fill-opacity:1;stroke:#ff0000;stroke-width:8.62159538;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+       d="m 41.790693,7.6928666 0.342626,0 0,34.5733794 -0.342626,0 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:6.40469217;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
   </g>
 </svg>
